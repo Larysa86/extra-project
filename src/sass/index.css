@@ -1,0 +1,475 @@
+@charset "UTF-8";
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --accent-color: #28a745;
+  --primary-white-color: #ffffff;
+  --main-hero-text-color: #e9e9e9;
+  --primary-text-color: #333333;
+  --secondary-text-color: #ffffff;
+  --input-text-color: #808080;
+  --main-font-family: "Open Sans", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--main-font-family);
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
+  font-size: 18px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+/* Класс для обнуления базовых свойств у списков (ul) */
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Свойства для корректного отображения картинок */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Свойства для обнуления курсива у address */
+address {
+  font-style: normal;
+}
+
+.container {
+  width: 1390px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid red;
+}
+
+.header {
+  padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.header .container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  font-size: 35px;
+  line-height: 1.21;
+  color: var(--secondary-text-color);
+  display: flex;
+  margin-right: auto;
+}
+.header-logo-img {
+  margin-right: 10px;
+}
+.header .accent {
+  margin-right: 10px;
+  color: var(--accent-color);
+}
+.header-nav-link {
+  line-height: 1.56;
+  color: var(--secondary-text-color);
+}
+.header-nav-item:not(:last-child) {
+  margin-right: 38px;
+}
+.header-nav-list {
+  display: flex;
+}
+
+.hero {
+  padding: 280px 0 280px 0;
+  text-align: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/herobackground/herobackground.jpg);
+}
+
+.hero-title {
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-size: 55px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--main-hero-text-color);
+}
+
+.hero-description {
+  margin-bottom: 29px;
+  font-size: 22px;
+  line-height: 1.67;
+  text-align: center;
+  color: var(--main-hero-text-color);
+}
+
+.button {
+  padding: 10px 30px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.about-list {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 19px;
+}
+
+.about-item {
+  width: 362px;
+  outline: 1px solid rgb(81, 0, 255);
+}
+
+.about-subtitle {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.about-text {
+  line-height: 1.56;
+  text-align: center;
+}
+
+/* стили SVG для  секции about */
+.about-icon {
+  margin-left: auto;
+  margin-right: auto;
+  width: 67px;
+  height: 67px;
+  fill: var(--secondary-text-color);
+  background-color: #28a745;
+  border-radius: 33.5px;
+}
+
+.about-icon-place {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solutions-container {
+  display: flex;
+}
+
+.solutions {
+  padding-top: 84px;
+  padding-bottom: 84px;
+  padding-left: 30px;
+  background: #28a745;
+  border-radius: 0px;
+}
+
+.solutions-pre-title {
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 1.65;
+  color: var(--secondary-text-color);
+}
+
+.solutions-title {
+  margin-bottom: 26px;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+  color: var(--secondary-text-color);
+}
+
+.solutions-text {
+  padding-right: 44px;
+  margin-bottom: 17px;
+  /* width: 606px; */
+  line-height: 1.56;
+  color: var(--secondary-text-color);
+}
+
+.solutions-button {
+  width: 167px;
+  height: 50px;
+  left: 710px;
+  top: 1369px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+}
+
+.post-boxes {
+  display: flex;
+}
+
+.posts__img {
+  width: 50%;
+}
+
+.posts-box {
+  padding: 110px 30px;
+  width: 50%;
+  background-color: #0284d0;
+}
+
+.posts__date {
+  font-size: 20px;
+  line-height: 1.65;
+  margin-bottom: 5px;
+  color: var(--primary-white-color);
+}
+
+.posts__title {
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+  margin-bottom: 25px;
+  margin-bottom: 25px;
+  color: var(--primary-white-color);
+}
+
+.posts__text {
+  line-height: 1.56;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+}
+
+.button--green {
+  background-color: #0284d0;
+  border: 1px solid var(--primary-white-color);
+}
+
+.cases {
+  padding-top: 50px;
+  padding-bottom: 48px;
+  background-color: rgb(200, 182, 199);
+}
+
+.cases-pre-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.cases-title {
+  margin-bottom: 34px;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+  text-align: center;
+}
+
+.cases-text {
+  margin-bottom: 39px;
+  line-height: 1.56;
+  text-align: center;
+}
+
+/* сетка карточек cases */
+.cases-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  margin-left: -8px;
+  margin-top: -7px;
+  background-color: rgb(88, 95, 185);
+}
+
+.cases-cards .item {
+  margin-left: 8px;
+  margin-top: 7px;
+  flex-basis: calc((100% - 64px) / 4);
+  outline: 1px solid rgb(218, 215, 227);
+}
+
+.team {
+  padding-top: 50px;
+}
+
+.team__text {
+  font-size: 20px;
+  line-height: 1.65;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.team__title {
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.team__subtitle {
+  line-height: 1.56;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card-list {
+  display: flex;
+  margin: -15px;
+}
+
+.card-list__item {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 15px;
+  flex-basis: calc((100% - 90px) / 3);
+}
+
+.card-list__box {
+  padding-bottom: 60px;
+  padding-top: 15px;
+}
+
+.card-list__title {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.27;
+  margin-bottom: 12px;
+}
+
+.card-list__subtitle {
+  line-height: 1.56;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover,
+.card:focus {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover .card-actions,
+.card:focus .card-actions {
+  opacity: 1;
+}
+
+.card-actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.card-actions__item {
+  display: flex;
+  align-items: center;
+}
+
+.card-actions__item:not(:last-child) {
+  margin-right: 25px;
+}
+
+.card-actions__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.request-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.request {
+  text-align: center;
+  width: 680px;
+  padding-top: 78px;
+  padding-bottom: 82px;
+  background-color: #f4f4f4;
+}
+
+.request-title {
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+  margin-bottom: 34px;
+}
+
+.field-name {
+  width: 620px;
+  height: 40px;
+  margin-bottom: 36px;
+}
+
+.field-email {
+  width: 620px;
+  height: 40px;
+  margin-bottom: 60px;
+}
+
+.send-button {
+  width: 620px;
+  height: 42px;
+  border-radius: 5px;
+  border-color: #28a745;
+  line-height: 1.39;
+  text-align: center;
+  color: #ffffff;
+  background-color: #28a745;
+}/*# sourceMappingURL=index.css.map */
