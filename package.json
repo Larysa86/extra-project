@@ -1,11 +1,11 @@
 {
-  "name": "fson58-hackers",
+  "name": "extra-project",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://FelixPolkanov.github.io/fson58-hackers",
+  "homepage": "https://Larysa86.github.io/extra-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /fson58-hackers/"
+    "build": "parcel build src/*.html --public-url /extra-project/"
   },
   "repository": {
     "type": "git",
